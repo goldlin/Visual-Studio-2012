@@ -1,0 +1,18 @@
+﻿<Window x:Class="Resource.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Title="ResourceFromCodeBehind" Height="175" Width="250">
+    <Window.Resources>
+        <system:String x:Key="strWindow">Hello, Window world!</system:String>
+    </Window.Resources>
+    <DockPanel Margin="10" Name="pnlMain">
+        <DockPanel.Resources>
+            <system:String x:Key="strPanel">Hello, Panel world!</system:String>
+        </DockPanel.Resources>
+        <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="10">
+            <Button Name="btnClickMe" Click="BtnClickMe_OnClick">Click me!</Button>
+        </WrapPanel>
+        <ListBox Name="lbResult"></ListBox>
+    </DockPanel>
+</Window>

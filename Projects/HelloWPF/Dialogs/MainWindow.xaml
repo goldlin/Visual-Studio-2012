@@ -1,0 +1,14 @@
+﻿<Window x:Class="Dialogs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <DockPanel Margin="10">
+        <WrapPanel HorizontalAlignment="Center" DockPanel.Dock="Top" Margin="0,0,0,10">
+            <Button Name="btnOpenFile" Click="BtnOpenFile_OnClick">Open file</Button>
+            <Button Name="btnSaveFile" Click="BtnSaveFile_OnClick">Save file</Button>
+            <Button Name="btnInput" Click="BtnInput_OnClick">Enter your name...</Button>
+            <Label Name="lblName" Margin="10,0" FontWeight="Bold">[No name entered]</Label>
+        </WrapPanel>
+        <TextBox Name="txtEditor" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" />
+    </DockPanel>
+</Window>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="Panels.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Canvas" Height="275" Width="260">
+    <Canvas>
+        <WrapPanel Canvas.Top="0">
+            <Button Name="WrapPanelButton" Click="WrapPanelButton_OnClick">WrapPanel</Button>
+            <Button Name="StackPanelButton" Click="StackPanelButton_OnClick">StackPanel</Button>
+            <Button Name="DockPanelButton" Click="DockPanelButton_OnClick">DockPanel</Button>
+        </WrapPanel>
+        <WrapPanel Canvas.Bottom="0">
+            <Button Name="GridSimpleButton" Click="GridSimpleButton_OnClick">GridSimple</Button>
+            <Button Name="GridSplitterButton" Click="GridSplitterButton_OnClick">GridSplitter</Button>
+            <Button Name="GridContactFormButton" Click="GridContactFormButton_OnClick">GridContactForm</Button>
+        </WrapPanel>
+        <Ellipse Panel.ZIndex="2" Fill="Gainsboro" Canvas.Left="25" Canvas.Top="25" Width="200" Height="200" />
+        <Rectangle Panel.ZIndex="3" Fill="LightBlue" Canvas.Left="25" Canvas.Top="25" Width="50" Height="50" />
+        <Rectangle Panel.ZIndex="2" Fill="LightCoral" Canvas.Left="50" Canvas.Top="50" Width="50" Height="50" />
+        <Rectangle Panel.ZIndex="4" Fill="LightCyan" Canvas.Left="75" Canvas.Top="75" Width="50" Height="50" />
+    </Canvas>
+</Window>

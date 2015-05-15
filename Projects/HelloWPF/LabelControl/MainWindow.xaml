@@ -1,0 +1,53 @@
+﻿<Window x:Class="LabelControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="386" Width="250">
+    <StackPanel Margin="10">
+        <Label Target="{Binding ElementName=txtName}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="http://cdn1.iconfinder.com/data/icons/fatcow/16/bullet_green.png" />
+                <AccessText Text="_Name:" />
+            </StackPanel>
+        </Label>
+        <TextBox Name="txtName" />
+        <Label Target="{Binding ElementName=txtMail}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="http://cdn1.iconfinder.com/data/icons/fatcow/16/bullet_blue.png" />
+                <AccessText Text="_Mail:" />
+            </StackPanel>
+        </Label>
+        <TextBox Name="txtMail" />
+        <Label Target="{Binding ElementName=txtBody}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="http://cdn1.iconfinder.com/data/icons/fatcow/16/bullet_red.png" />
+                <AccessText Text="_Body:" />
+            </StackPanel>
+        </Label>
+        <TextBox Name="txtBody" AcceptsReturn="True" TextWrapping="Wrap" SpellCheck.IsEnabled="True" Language="en-US" Height="39" SelectionChanged="TxtBody_OnSelectionChanged" />
+        <TextBox Name="txtStatus" AcceptsReturn="True" TextWrapping="Wrap" IsReadOnly="True" Height="57" />
+        <Label FontWeight="Bold">Application Options</Label>
+        <StackPanel Margin="10,5">
+            <CheckBox IsThreeState="True" Name="cbAllFeatures" Checked="cbAllFeatures_CheckedChanged" Unchecked="cbAllFeatures_CheckedChanged" ToolTip="Enable all the following options">Enable all</CheckBox>
+            <StackPanel Margin="20,5">
+                <CheckBox Name="cbFeatureAbc" Checked="cbFeature_CheckedChanged" Unchecked="cbFeature_CheckedChanged">
+                    <TextBlock>
+                                Enable feature <Run Foreground="Green" FontWeight="Bold">ABC</Run>
+                    </TextBlock>
+                </CheckBox>
+                <CheckBox Name="cbFeatureXyz" IsChecked="True" Checked="cbFeature_CheckedChanged" Unchecked="cbFeature_CheckedChanged">
+                    <WrapPanel>
+                        <TextBlock>
+                                        Enable feature <Run FontWeight="Bold">XYZ</Run>
+                        </TextBlock>
+                        <Image Source="https://cdn0.iconfinder.com/data/icons/fatcow/16/question.png" Width="16" Height="16" Margin="5,0" />
+                    </WrapPanel>
+                </CheckBox>
+                <CheckBox Name="cbFeatureWww" Checked="cbFeature_CheckedChanged" Unchecked="cbFeature_CheckedChanged">
+                    <TextBlock>
+                                Enable feature <Run Foreground="Blue" TextDecorations="Underline" FontWeight="Bold">WWW</Run>
+                    </TextBlock>
+                </CheckBox>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>
